@@ -1,20 +1,16 @@
 #include <cmath>
+#include <stdexcept>
 
 #include "quad.hpp"
-
-double find_discriminant_of_quad(const double a, const double b, const double c)
-{
-    return b*b - 4.0*a*c;
-}
 
 std::pair<double, double> find_roots_of_quad(const double a, const double b, const double c)
 {
     if(a == 0)
-        return {NAN, NAN};
+        throw std::invalid_argument("This is not a quadratic equation.");
 
-    double discriminant = find_discriminant_of_quad(a, b, c);
+    double discriminant = b*b - 4.0*a*c;
     if(discriminant < 0)
-        return {INFINITY, INFINITY};
+        throw std::logic_error("This quadratic equation doesn't have roots in real numbers.");
 
     discriminant = sqrt(discriminant);
     return {(-b + discriminant)/(2.0*a), (-b - discriminant)/(2.0*a)};

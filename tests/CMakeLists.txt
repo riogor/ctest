@@ -10,14 +10,17 @@ set(CMAKE_C_FLAGS "-Wall -Wextra -Wpedantic -Wconversion -Wunreachable-code -Wol
 include(GoogleTest)
 
 set (TESTS
+        test_quad.hpp
         )
 
 include_directories(${PROJECT_NAME} PUBLIC ../app)
 
 set (EXT_HEADERS
+        ../app/quad.hpp
         )
 
 set (EXT_SOURCES
+        ../app/quad.cpp
         )
 
 add_definitions(-DINPUTDIR="${PROJECT_SOURCE_DIR}/input")
