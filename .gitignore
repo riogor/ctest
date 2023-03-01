@@ -8,3 +8,4 @@ app/app
 *.gcno
 tests/tests
 Testing
+.vscode

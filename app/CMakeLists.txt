@@ -7,10 +7,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_definitions ("-Wall -Wextra -Wpedantic -Weffc++ -Wconversion -Wunreachable-code -Wold-style-cast")
 
 set(SOURCES
-        main.c
+        main.cpp
+        quad.cpp
         )
 
 set(HEADERS
+        quad.hpp
         )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
