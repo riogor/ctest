@@ -10,6 +10,7 @@ TEST(test_quad, base)
 {
     ASSERT_THAT(find_roots_of_quad(1, 0, -1), testing::Pair(1.0, -1.0));
     ASSERT_THAT(find_roots_of_quad(1, 4, 3), testing::Pair(-1.0, -3.0));
+    ASSERT_THAT(find_roots_of_quad(1, -2, 1), testing::Pair(1.0, 1.0));
 }
 
 TEST(test_quad, non_quad)
